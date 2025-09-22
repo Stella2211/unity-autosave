@@ -1,0 +1,23 @@
+{
+  "name": "com.github.stella2211.unity-autosave",
+  "version": "1.0.0",
+  "displayName": "Unity AutoSave",
+  "description": "Unity 6エディタ用の軽量な自動保存拡張機能。エディタのクラッシュによるデータ損失を防ぎます。",
+  "unity": "6000.2",
+  "unityRelease": "5f1",
+  "keywords": [
+    "autosave",
+    "editor",
+    "tools",
+    "utility"
+  ],
+  "author": {
+    "name": "Stella",
+    "email": "stella@starry-night.dev"
+  },
+  "dependencies": {},
+  "samples": [],
+  "documentationUrl": "https://github.com/Stella2211/unity-autosave",
+  "changelogUrl": "https://github.com/Stella2211/unity-autosave/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/Stella2211/unity-autosave/blob/main/LICENSE"
+}
