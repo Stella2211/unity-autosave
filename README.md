@@ -1,59 +1,61 @@
-# Unity 6 AutoSave Extension
+# 🎮 Unity 6 AutoSave Extension
 
-Unity 6用の軽量な自動保存エディタ拡張機能。エディタのクラッシュによるデータ損失を防ぎます。
+*[日本語版 README はこちら](README_ja.md)*
 
-## 機能
+A lightweight auto-save editor extension for Unity 6 that prevents data loss from unexpected editor crashes.
 
-- **自動シーン保存**: 設定可能な間隔で自動的にシーンを保存（デフォルト: 10分）
-- **プレイモード保護**: プレイモード開始前に自動的に保存
-- **バックアップモード**: 上書きせずにタイムスタンプ付きのコピーを保存するオプション
-- **コンソール通知**: 保存操作のログ表示（オプション）
-- **手動保存**: メニューからのクイック保存コマンド
-- **ビジュアル設定ウィンドウ**: 使いやすい設定インターフェース
+## ✨ Features
 
-## インストール方法
+- **🔄 Automatic Scene Saving**: Automatically saves your scene at configurable intervals (default: 10 minutes)
+- **🎬 Play Mode Protection**: Automatically saves before entering play mode
+- **💾 Backup Mode**: Option to save timestamped copies without overwriting the original
+- **📢 Console Notifications**: Optional logging of save operations
+- **⚡ Manual Save Command**: Quick save command from the menu
+- **🎨 Visual Settings Window**: User-friendly configuration interface
 
-### 方法1: Unity Package Manager（Git URL）
+## 📦 Installation
 
-1. Unityエディタで `Window > Package Manager` を開く
-2. 左上の `+` ボタンをクリック
-3. `Add package from git URL...` を選択
-4. 以下のURLを入力:
+### Method 1: Unity Package Manager (Git URL) ⭐ Recommended
+
+1. Open `Window > Package Manager` in the Unity Editor
+2. Click the `+` button in the top left corner
+3. Select `Add package from git URL...`
+4. Enter the following URL:
    ```
    https://github.com/Stella2211/unity-autosave.git
    ```
-5. `Add` をクリック
+5. Click `Add`
 
-### 方法2: 手動インストール(非推奨)
-この方法では自動更新が行われないため、非推奨です。
-1. `AutoSaveExtension.cs` と `AutoSaveSettingsWindow.cs` ファイルをプロジェクトの `Assets/Editor/` フォルダーにコピー
-2. Unityが自動的にコンパイルして拡張機能を初期化します
-3. 自動保存機能はデフォルトで有効になります
+### Method 2: Manual Installation ⚠️ Not Recommended
+This method does not support automatic updates, so it's not recommended.
+1. Copy `AutoSaveExtension.cs` and `AutoSaveSettingsWindow.cs` files to your project's `Assets/Editor/` folder
+2. Unity will automatically compile and initialize the extension
+3. The auto-save feature is enabled by default
 
-## 使用方法
+## 🚀 Usage
 
-### 設定へのアクセス
-- Unityメニューバーの `Tools > AutoSave > Settings` に移動
-- 設定ウィンドウで環境設定を行います
+### 🔧 Accessing Settings
+- Navigate to `Tools > AutoSave > Settings` in the Unity menu bar
+- Configure your preferences in the settings window
 
-### 設定オプション
-- **Enable AutoSave（自動保存を有効化）**: 自動保存機能のオン/オフ切り替え
-- **Save Interval（保存間隔）**: 自動保存の間隔を設定（1〜60分）
-- **Save as Copy（コピーとして保存）**: 上書きせずにタイムスタンプ付きのバックアップファイルを作成
-- **Show Notifications（通知を表示）**: 保存時にコンソールメッセージを表示
+### ⚙️ Configuration Options
+- **✅ Enable AutoSave**: Toggle the auto-save feature on/off
+- **⏱️ Save Interval**: Set the interval for automatic saves (1-60 minutes)
+- **📋 Save as Copy**: Create timestamped backup files without overwriting
+- **🔔 Show Notifications**: Display console messages when saving
 
-### 手動操作
-- **今すぐ保存**: `Tools > AutoSave > Save Now` - 即座に保存を実行
-- **タイマーリセット**: 設定ウィンドウ内で利用可能 - カウントダウンタイマーをリセット
+### 🎯 Manual Controls
+- **💾 Save Now**: `Tools > AutoSave > Save Now` - Execute an immediate save
+- **🔄 Reset Timer**: Available in the settings window - Reset the countdown timer
 
-## 重要な注意事項
+## ⚠️ Important Notes
 
-- この拡張機能は、少なくとも一度手動で保存されたシーンでのみ動作します
-- プレイモード中およびコンパイル中は自動保存が無効になります
-- 過度な保存を防ぐため、最小保存間隔は1分です
-- バックアップファイルは次の形式を使用: `SceneName_AutoSave_YYYYMMDD_HHMMSS.unity`
+- This extension only works with scenes that have been manually saved at least once
+- Auto-save is disabled during play mode and compilation
+- Minimum save interval is 1 minute to prevent excessive saving
+- Backup files use the format: `SceneName_AutoSave_YYYYMMDD_HHMMSS.unity`
 
-## パッケージ構造
+## 📁 Package Structure
 
 ```
 unity-autosave/
@@ -66,27 +68,27 @@ unity-autosave/
     └── AutoSaveSettingsWindow.cs
 ```
 
-## ライセンス
+## 📄 License
 
-この拡張機能はMITライセンスで提供されています。
+This extension is provided under the MIT License.
 
-## トラブルシューティング
+## 🔍 Troubleshooting
 
-自動保存が動作しない場合:
-1. シーンが少なくとも一度手動で保存されていることを確認
-2. 設定で拡張機能が有効になっていることを確認
-3. Unityコンソールでエラーメッセージを確認
-4. プレイモードまたはコンパイル中でないことを確認
+If auto-save is not working:
+1. ✔️ Ensure the scene has been manually saved at least once
+2. ✔️ Verify the extension is enabled in the settings
+3. ✔️ Check the Unity console for error messages
+4. ✔️ Confirm you're not in play mode or during compilation
 
-## 貢献
+## 🤝 Contributing
 
-この拡張機能を改善するための問題報告やプルリクエストをお気軽にお送りください。
+Feel free to submit issues and pull requests to improve this extension!
 
-## 変更履歴
+## 📝 Changelog
 
 ### v1.0.0 (2025-01-22)
-- 初回リリース
-- 基本的な自動保存機能
-- プレイモード前の自動保存
-- バックアップモードサポート
-- 設定ウィンドウUI
+- 🎉 Initial release
+- 🔄 Basic auto-save functionality
+- 🎬 Auto-save before play mode
+- 💾 Backup mode support
+- 🎨 Settings window UI
